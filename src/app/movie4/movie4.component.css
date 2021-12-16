@@ -1,0 +1,13 @@
+*{
+    align-items: center; 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(118, 66, 44);
+}
+
+
+.description{
+  padding: 0 7vw;
+}

@@ -1,0 +1,21 @@
+.navContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.baseButton{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+div>a>img:active{
+  opacity: .50;
+}
+
+
+div>a>img{
+  height: 35vh;
+  margin: 2vh 1.5vw;
+}

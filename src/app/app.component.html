@@ -1,0 +1,25 @@
+<div [style.background-color] = "headerColor">
+
+    <div [ngSwitch]="toggle">
+      <div  class="navContainer" *ngSwitchCase="true">
+        <a routerLink="/book1"><img class="navImage" src="https://images-eu.bookshop.org/images/9781407132082.jpg?height=500&v=v4" /></a>
+        <a routerLink="/book2"><img class="navImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQXlO4139Wqa_u9DNKMJ5-iuWnAbEkLIjq2A&usqp=CAU" /></a>
+        <a routerLink="/book3"><img class="navImage" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Mockingjay.JPG/220px-Mockingjay.JPG" /></a>
+      </div>
+      <div class="navContainer" *ngSwitchCase="false">
+        <a routerLink="/movie1"><img class="navImage" src="https://www.dvdsreleasedates.com/posters/800/T/The-Hunger-Games-2012-movie-poster.jpg" /></a>
+        <a routerLink="/movie2"><img class="navImage" src="https://m.media-amazon.com/images/M/MV5BMTAyMjQ3OTAxMzNeQTJeQWpwZ15BbWU4MDU0NzA1MzAx._V1_.jpg" /></a>
+        <a routerLink="/movie3"><img class="navImage" src="https://thatfilmbloguk.files.wordpress.com/2015/10/maxresdefault.jpg" /></a>
+        <a routerLink="/movie4"><img class="navImage" src="https://m.media-amazon.com/images/M/MV5BNjQzNDI2NTU1Ml5BMl5BanBnXkFtZTgwNTAyMDQ5NjE@._V1_FMjpg_UX1000_.jpg" /></a>
+      </div>
+    </div>
+    <div class="baseButton">
+      <a routerLink="">
+        <button (click)="changeTheme()">{{media}}</button>
+      </a>
+    </div>
+    <router-outlet></router-outlet>
+    <div class="baseButton" *ngIf = "opening">
+      <p>"Welcome to our app! Click the image to check content or click the button to toggle version."</p>
+    </div>
+</div>
